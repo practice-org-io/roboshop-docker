@@ -2,17 +2,17 @@ services:
   catalogue:
     build:
       dockerfile: catalogue.Dockerfile
-    image: lokesh/catalogue:1.0.0
+    image: lokesh_lkh/catalogue:1.0.0
     container_name: catalogue
     depends_on:
     - mongodb
-    
+
 
 
   mongodb:
     build: 
       dockerfile: mongodb.Dockerfile #it moves to mongodb directory.
-    image: lokesh/mongodb:1.0.0  # docker build -t lokesh/mongodb:1.0.0
+    image: lokesh_lkh/mongodb:1.0.0  # docker build -t lokesh/mongodb:1.0.0
     container_name: mongodb
 
 networks:
