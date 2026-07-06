@@ -11,6 +11,7 @@ services:
     container_name: user
     depends_on:
     - redis
+    - mongodb
   cart:
     build: ./cart
     image: joindevops/cart:1.0.0
