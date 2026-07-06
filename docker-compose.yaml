@@ -24,7 +24,7 @@ services:
   mongodb:
     build: 
       dockerfile: mongodb.Dockerfile #it moves to mongodb directory.
-    image: lokeshlh/mongodb:1.0.0  # docker build -t lokesh/mongodb:1.0.0
+    image: joindevops/mongodb:1.0.0  # docker build -t lokesh/mongodb:1.0.0
     container_name: mongodb
   redis:
     image: redis:7.0
