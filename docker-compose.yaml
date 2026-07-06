@@ -14,8 +14,7 @@ services:
     depends_on:
     - redis
   frontend:
-    build:
-      dockerfile: frontend.Dockerfile
+    build: ./frontend
     image: joindevops/frontend:1.0.0
     container_name: frontend
     ports:
