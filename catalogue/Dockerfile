@@ -13,6 +13,10 @@ EXPOSE 8080
 COPY --from=builder /app /app
 ENV MONGO="true" \
     MONGO_URL="mongodb://mongodb:27017/catalogue"
+#Here groupname and username are same.i.e, roboshop.
+RUN adduser -S roboshop && adduser -S roboshop -G roboshop 
+RUN chown -R roboshop:roboshop /app
+USER roboshop
 CMD ["node", "server.js"]
 
 
